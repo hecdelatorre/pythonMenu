@@ -3,6 +3,9 @@
 from simple_term_menu import TerminalMenu
 import time
 
+def pausa(t=3):
+    time.sleep(t)
+
 def menu(title, items):
     main_menu_cursor = "❯ "
     main_menu_cursor_style = ("fg_cyan", "bold")
@@ -31,6 +34,15 @@ items = ["1 Opc",
 repeat = True
 while repeat:
     opc = menu(title, items)
-    print(opc)
-    time.sleep(3)
+
+    if(opc == 1):
+        print('Op 1')
+        pausa()
+    elif (opc == 2):
+        print('Op 2')
+        pausa()
+    elif (opc == 3):
+        print('Op 3')
+        pausa()
+
     repeat = (opc < 4)

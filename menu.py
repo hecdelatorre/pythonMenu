@@ -3,8 +3,7 @@
 from simple_term_menu import TerminalMenu
 import time
 
-def pausa(t = 1):
-    time.sleep(t)
+def pausa(t = 1): time.sleep(t)
 
 def menu(title, items):
     cursor = "❯ "
@@ -29,15 +28,13 @@ title = "  Menu"
 items = ["1 Opc", 
          "2 Opc", 
          "3 Opc", 
-         "4 Opc", 
-         "5 Opc", 
          "Exit"]
 
 repeat = True
 while repeat:
     opc = menu(title, items)
 
-    if(opc == 1):
+    if (opc == 1):
         print('Op 1')
         pausa()
     elif (opc == 2):

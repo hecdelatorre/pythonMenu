@@ -12,7 +12,7 @@ def menu(title, items):
 
     main_menu = TerminalMenu(
         menu_entries = items,
-        title = title,
+        title = f'  {title}',
         menu_cursor = cursor,
         menu_cursor_style = cursor_style,
         menu_highlight_style = menu_style,
@@ -24,7 +24,7 @@ def menu(title, items):
     num += 1
     return num
 
-title = "  Menu"
+title = "Menu"
 items = ["1 Opc", 
          "2 Opc", 
          "3 Opc", 

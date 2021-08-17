@@ -1,8 +1,8 @@
-from menu import menu, pausa
+from menu import menu, shortcuts, pausa
 
 def main():
     title = "Menu"
-    items = ["1 Option", 
+    items = ["1 Shortcuts", 
              "2 Option", 
              "3 Option", 
              "Exit"]
@@ -12,14 +12,15 @@ def main():
         opc = menu(title, items)
 
         if (opc == 1):
-            print('Option 1')
-            pausa()
+            print('Shortcuts 1')
+            shortcuts()
+            pausa(0)
         elif (opc == 2):
             print('Option 2')
-            pausa()
+            pausa(0)
         elif (opc == 3):
             print('Option 3')
-            pausa()
+            pausa(0)
     
         repeat = (opc < len(items))
 

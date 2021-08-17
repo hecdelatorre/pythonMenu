@@ -25,3 +25,10 @@ def menu(title, items):
     num = main_menu.show()
     num += 1
     return num
+
+def shortcuts():
+    fruits = ["[a] apple", "[b] banana", "[o] orange"]
+    terminal_menu = TerminalMenu(fruits, title="Fruits")
+    menu_entry_index = terminal_menu.show()
+    print(menu_entry_index)
+

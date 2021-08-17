@@ -28,7 +28,13 @@ def menu(title, items):
 
 def shortcuts():
     fruits = ["[a] apple", "[b] banana", "[o] orange"]
-    terminal_menu = TerminalMenu(fruits, title="Fruits")
+    terminal_menu = TerminalMenu(fruits, 
+                                 title = "Fruits",
+                                 menu_cursor = "❯ ",
+                                 shortcut_key_highlight_style = ("fg_red",),
+                                 shortcut_brackets_highlight_style = ("fg_red",),
+                                )
+
     menu_entry_index = terminal_menu.show()
     print(menu_entry_index)
 
@@ -36,7 +42,7 @@ def multi_select():
     terminal_menu = TerminalMenu(
         ["dog", "cat", "mouse", "squirrel"],
         multi_select=True,
-        show_multi_select_hint=False
+        show_multi_select_hint=False,
     )
     menu_entry_indices = terminal_menu.show()
     print(menu_entry_indices)

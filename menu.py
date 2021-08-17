@@ -23,7 +23,7 @@ def menu(title, items):
     )
     
     num = main_menu.show()
-    num += 1
+    num = num + 1 if num is not None else exit()
     return num
 
 def shortcuts():

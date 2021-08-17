@@ -1,9 +1,9 @@
-from menu import menu, shortcuts, pausa
+from menu import menu, shortcuts, multi_select, pausa
 
 def main():
     title = "Menu"
     items = ["1 Shortcuts", 
-             "2 Option", 
+             "2 MultiSelect", 
              "3 Option", 
              "Exit"]
 
@@ -12,11 +12,12 @@ def main():
         opc = menu(title, items)
 
         if (opc == 1):
-            print('Shortcuts 1')
+            print('Shortcuts')
             shortcuts()
             pausa(0)
         elif (opc == 2):
-            print('Option 2')
+            print('MultiSelect')
+            multi_select()
             pausa(0)
         elif (opc == 3):
             print('Option 3')
